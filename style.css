@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Poppins:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+.about,
+.service,
+.skill,
+.work,
+.education,
+.contact {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section {
+    padding: 70px 0;
+}
+
+section p {
+    text-align: justify;
+}
+
+section .tittle {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+section .tittle::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 150px;
+    padding: 2px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+.about .aboutcontent,
+.service .servicecontent,
+.skill .skillcontent,
+.work .workcontent,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section .tittle::after {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 15px;
+    color: rgb(121, 12, 12);
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: none;
+    padding: 8px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar.sticky {
+    padding: 0px 0;
+    background: rgba(206, 206, 206);
+}
+
+.navbar .logo a {
+    color: rgb(121, 12, 12);
+    font-size: 35px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar.navbar.sticky .logo a {
+    color: black;
+}
+
+.navbar .max {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.max {
+    padding: 0px 100px;
+    margin: auto;
+    max-width: 1300px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 550;
+    position: relative;
+    left: 44px;
+}
+
+.navbar .menu li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(121, 12, 12);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.navbar .menu li a:hover::after {
+    width: 100%;
+}
+
+.menubutton {
+    color: black;
+    font-size: 23px;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    display: none;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home .max {
+  display: flex;
+  width: 100%;
+}
+
+.homecontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.homecontent h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.homecontent p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p.moving {
+  color: white;
+  background-color: rgb(195, 148, 7);
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 30px;
+  transition: transform 0.2s ease-out, color 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: crimson;
+}
+
+.homeimage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeimage img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about .tittle::after {
+    content: "short breif";
+}
+
+.about .aboutcontent .left {
+    width: 45%;
+}
+
+.about .aboutcontent .right {
+    width: 50%;
+}
+
+.about .aboutcontent .left img {
+    height: 550px;
+    width: 430px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .aboutcontent .right p {
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+}
+
+.about .aboutcontent .right a {
+    display: inline-block;
+    background: rgb(121, 12, 12);
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(121, 12, 12);
+    transition: all 0.2s ease;
+}
+
+.about .aboutcontent .right a:hover {
+    color: rgb(121, 12, 12);
+    background: none;
+}
+
+.text span {
+    color: red;
+}
+
+.education .educationcontent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.education .tittle::after {
+    content: 'Academic Info';
+}
+
+.education-box {
+    max-width: calc(50% - 10px);
+    margin: 5px;
+    flex: 50%;
+}
+
+.education-box .info {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 32px;
+    border: .6px solid lavender;
+    overflow: hidden;
+}
+
+.education-box .info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    z-index: -1;
+    background-color: lavender;
+    transition: all 0.5s;
+}
+
+.box-content .info p {
+    text-align: center;
+}
+
+.box-content .info:hover::before {
+    left: 0;
+}
+
+.box-content .info .year {
+    font-size: 1.5 rem;
+    padding-bottom: .5rem;
+}
+
+.box-content .info .year {
+    padding-bottom: .5rem;
+}
+
+.box-content .info i {
+    padding-right: .5rem;
+}
+
+.box-content .info h2 {
+    font-size: 18px;
+}
+
+.service {
+    background: white;
+    color: black;
+}
+
+.service .tittle::after {
+    content: 'what im aiming';
+}
+
+.service .servicecontent .card {
+    width: calc(30% - 20px);
+    background-color: rgb(223, 223, 223);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.service .servicecontent .card:hover {
+    background: white;
+    border-color: black;
+}
+
+.service .servicecontent .card i {
+    color: rgb(121, 12, 12);
+    font-size: 30px;
+}
+
+.service .servicecontent .card p {
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.service .servicecontent .card .box {
+    transition: all 0.2s ease;
+}
+
+.service .servicecontent .card:hover .box {
+    transform: scale(1.1);
+}
+
+.skill .tittle::after {
+    content: 'my domains';
+}
+
+.skill .skillcontent .left p {
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+}
+
+.skill .skillcontent .colum {
+    width: calc(50% - 30px);
+}
+
+.skill .skillcontent .right .bar {
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+.skill .skillcontent .right .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill .skillcontent .right .span {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.skill .skillcontent .right .line {
+    height: 4px;
+    background: rgb(165, 165, 165);
+    width: 100%;
+    position: relative;
+}
+
+.skill .skillcontent .right .line::before {
+    content: '';
+    height: 100%;
+    background: rgb(121, 12, 12);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.skill .skillcontent .right .HTML::before {
+    width: 50%;
+}
+
+.skill .skillcontent .right .C::before {
+    width: 50%;
+}
+
+.skill .skillcontent .right .CSS::before {
+    width: 50%;
+}
+
+.skill .skillcontent .right .ME::before {
+    width: 80%;
+}
+
+.skill .skillcontent .right .AI::before {
+    width: 80%;
+}
+
+.skill .skillcontent .left a {
+    display: inline-block;
+    background: rgb(121, 12, 12);
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(121, 12, 12);
+    transition: all 0.2s ease;
+}
+
+.skill .skillcontent .left a:hover {
+    color: rgb(121, 12, 12);
+    background: none;
+}
+
+.work-card img {
+    width: 100%;
+    vertical-align: top;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 6px;
+}
+
+.work .text p {
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.work .text a {
+    display: inline-block;
+    background: rgb(121, 12, 12);
+    color: white;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(121, 12, 12);
+    transition: all 0.2s ease;
+}
+
+.work .text a:hover {
+    color: rgb(121, 12, 12);
+    background: none;
+}
+
+.work .workcontent .right {
+    width: 50%;
+}
+
+.work .workcontent {
+    margin-top: 50px;
+}
+
+.work .tittle::after {
+    content: 'Recent projects';
+}
+
+.work-card {
+    width: calc(30% - 20px);
+    background-color: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.work-card:hover {
+    transform: scale(1.05);
+}
+
+.work-card:hover img {
+    transform: scale(1.2);
+}
+
+.work-card:hover .work-overlay {
+    opacity: 1;
+}
+
+.contact .tittle::after {
+    content: "short breif";
+}
+
+.contact .contact-content .colum {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .left p {
+    text-align: start;
+}
+
+.contact .contact-content .left .icons {
+    margin: 5px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .contact-content .row i {
+    color: rgb(121, 12, 12);
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .subhead {
+    color: #333;
+    font-size: 15px;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .field.textarea {
+    height: 85px;
+    width: 100%;
+}
+
+.contact .right form .field.email {
+    margin-left: 10px;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.contact .right form input,
+.contact .right form .field.textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1.4px solid rgb(121, 12, 12);
+    border-radius: 6px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .right form .field.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.contact .right form .button {
+    height: 40px;
+    width: 115px;
+}
+
+.contact .right form .button button {
+    height: 100%;
+    width: 100%;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(121, 12, 12);
+    border-radius: 6px;
+    background: rgb(121, 12, 12);
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.contact .right form .button button:hover {
+    background: none;
+    color: rgb(121, 12, 12);
+    font-weight: 600;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    padding: 20px 23px;
+    text-align: center;
+}
+
+footer span a {
+    color: rgb(121, 12, 12);
+    text-decoration: none;
+}
+
+footer span a {
+    text-decoration: underline;
+}
+
+@media (max-width: 1208px) {
+    .about .aboutcontent .left img {
+        height: 450px;
+        width: 330px;
+    }
+}
+
+@media (max-width: 910px) {
+    .max {
+        max-width: 800px;
+    }
+
+    .about .aboutcontent .colum {
+        width: 100%;
+    }
+
+    .about .aboutcontent .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .aboutcontent .right {
+        width: 100%;
+    }
+
+    .service .servicecontent .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skill .skillcontent .colum,
+    .contact .contact-content .colum {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .skill .skillcontent .right {
+        margin-right: 0;
+    }
+
+    .work-card {
+        flex: 80%;
+        margin-bottom: 20px;
+    }
+
+    .work-card img {
+        width: 70%;
+    }
+
+    .work-card:hover img {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 920px) {
+    .max {
+        padding: 0px 70px;
+    }
+
+    .home .max {
+        margin: auto 0px auto;
+        position: relative;
+        top: 110px;
+        color: black;
+    }
+
+    .menubutton {
+        color: black;
+        font-size: 23px;
+        cursor: pointer;
+        position: relative;
+        left: 30px;
+        display: block;
+        z-index: 999;
+    }
+
+    .menubutton i.active::before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: white;
+        text-align: center;
+        padding-top: 50px;
+        transition: all 01s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font: size 30px;
+    }
+
+    .home .max h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .home .max p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .home .moving {
+        background: gray;
+        padding: 5 10px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
+        color: rgb(200, 200, 200);
+    }
+
+    .social-icons a:hover {
+        color: rgb(47, 190, 209)
+    }
+
+    .homeimage {
+        display: none;
+    }
+}
+
+@media (max-width: 590px) {
+    .service .servicecontent .card {
+        width: 100%
+    }
+
+    .education-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+     .max{
+        padding: 0px 40px;
+     }
+     .home {
+        background: url(images/home.jpeg) no-repeat;         
+      }
+    .home .max {
+        margin: auto 0px auto;
+        position: relative;
+        top: 110px;
+    }
+    .homeimage {
+        display: none;
+    }
+}
